@@ -13,10 +13,52 @@
 imagem
 
 ## Variáveis e conjunto de cores do sistema
+<p align="center">
+  <img src="imagens/var.png" alt="Variáveis e colsets do sistema" width="300"/>
+  <br/>
+  <em>Figura 1 - Variáveis e colsets do sistema</em>
+</p>
+É importante explicar algumas variáveis essenciais do projeto com a finalidade de ser mais fácil o entedimento:
 
+- val limitVeh = 8:
+  - Define um valor de 8 para a quantidade de veículos que passam no semáforo quando ele estiver verde;
+- INT e INT_s:
+  - Define inteiros com acompanhamento de delay e numerais inteiros, respectivamente;
+- *VTYPE*
+  - Define o tipo de carro;
+- VEH
+  - Define um conjunto de variáveis do produto de (inteiro | tipo de veículo | tempo). Com a finalidade de monitorar a quantidade gerada, o tipo de veículo e o tempo que ele foi gerado;
+- Função *makeVeh*
+  - Cria justamemnte um valor do tipo veh;
+- Função *expTime*
+  - Função criada com o objetivo de gerar aleatoriamente veículos para simulação mais realista no modelo; 
+## Modelo no *CPN Tools*
+
+Na figura 2 pode-se ver uma visão geral na página principal do sistema, sendo ele modularizado e com uma fácil visualização e interpretação do modelo.
+<p align="center">
+  <img src="imagens/sistema.png" alt="Variáveis e colsets do sistema" width="300"/>
+  <br/>
+  <em>Figura 2 - Visão geral do sistema</em>
+</p>
+
+### Gera_NS e Gera_LO
+A figura 3 mostra a lógica usada para a geração de veículos, onde o lugar e a transição superior geram carros e a inferior gera ônibus. 
+<p align="center">
+  <img src="imagens/gera.png" alt="Variáveis e colsets do sistema" width="300"/>
+  <br/>
+  <em>Figura 3 - Geração de veículos </em>
+</p>
+
+Dessa forma, é gerado ciclicamente ambos os veículos e passa pela função makeVeh para obter as informações do veículo, que será utilizado posteriormente para a definição de preferencia. A mesma lógica de cores e temporização é definido em ambos os semáforos (Norte - Sul e Leste - Oeste), mas com lógicas invertidas.
  
+### Semáforos
 
-
+A figura 4 mostra toda a lógica implementada do semáforo, com a mudança padrão das cores do semáforo como também a prioridade quando tiver ônibus na fila.
+<p align="center">
+  <img src="imagens/Semáforo.png" alt="Variáveis e colsets do sistema" width="450"/>
+  <br/>
+  <em>Figura 4 - Semáforo </em>
+</p>
 
 
 
