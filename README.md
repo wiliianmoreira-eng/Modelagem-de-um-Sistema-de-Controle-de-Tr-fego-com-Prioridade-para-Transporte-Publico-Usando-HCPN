@@ -104,7 +104,7 @@ Os tempos definidos são:
 Quando há prioridade para ônibus, o verde é estendido para 30 unidades de tempo (figura 7).  
 
 <p align="center">
-  <img src="imagens/logica.png" alt="Lógica padrão do semáforo" width="450"/>
+  <img src="imagens/logicanovo.png" alt="Lógica padrão do semáforo" width="450"/>
   <br/>
   <em>Figura 6 - Lógica padrão do semáforo</em>
 </p>
@@ -113,7 +113,7 @@ Quando há prioridade para ônibus, o verde é estendido para 30 unidades de tem
 A figura 7 mostra a ativação da prioridade: quando um ônibus chega, a transição `t4` com a *guard* `[ #2(veh) = Bus ]` reconhece o veículo e envia um token (`x = 30`) para a *place* `EstadoSemaforo`, prolongando o verde.  
 
 <p align="center">
-  <img src="imagens/prioridade.png" alt="Lógica de prioridade" width="450"/>
+  <img src="imagens/prioridadenovo.png" alt="Lógica de prioridade" width="450"/>
   <br/>
   <em>Figura 7 - Lógica de prioridade</em>
 </p>
@@ -128,6 +128,8 @@ A figura 8 modela a faixa de pedestres, que funciona de forma invertida em rela�
 </p>
 
 ---
+
+Nas figuras 6 e 7, pode-se perceber prioridades em algumas transições do semáforo, de modo que um sinal ficasse amarelo e outro em verde, pois dessa forma, ambos os cruzamentos podem passar carros, tendo em vista um cenário real. Para isso, atribui-se o `delayRed` a maior prioridade (1) entre as transições `VerdeDelay` (3), `R` (2) e `G` (4) para o sistema priorizar ficar vermelho na transição de verde para amarelo em um sinal e continuasse em amarelo até que o outro fique em vermelho no ouitro sinal, solucionando assim o problema supracitado. 
 
 ### 4.3 Saída de veículos
 A figura 9 representa a saída de veículos, separando Norte-Sul e Leste-Oeste.  
