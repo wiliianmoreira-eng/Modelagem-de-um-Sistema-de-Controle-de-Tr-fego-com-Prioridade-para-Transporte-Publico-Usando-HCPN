@@ -153,3 +153,9 @@ Entre os principais pontos observados:
 - O modelo é facilmente extensível, podendo incluir mais faixas, sensores adicionais ou regras de prioridade específicas.  
 
 Este projeto demonstra como **Redes de Petri Coloridas Hierárquicas** podem ser aplicadas em sistemas de controle de tráfego urbano, oferecendo uma ferramenta útil para análise, simulação e planejamento.
+
+## Link do YouTube
+
+Aqui está o link da simulação e da comprovação da nossa modelagem:
+
+> https://youtu.be/PjuVyHDRke0
